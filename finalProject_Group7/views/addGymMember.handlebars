@@ -1,0 +1,39 @@
+<div class="content">
+   <div class="container-fluid">
+      <div class="jumbotron" id="head-doc">
+         <header>
+            <h1>Add Stats for Gym Member</h1>
+         </header>
+         <form id="createMember-form" action="/gymMember/add" method="POST">
+            {{#if alertMsg}}
+            <p class="alertMsg">{{alertMsg}}</p>
+            {{/if }}
+
+            <div class="inputDiv">
+               <label for="membername">Select Member</label>
+               <select id="membername" name="membername" required>
+                  <option value="">Choose</option>
+                  {{#each membernames}}
+                  <option value={{this.username}}>{{this.username}}</option>
+                  {{/each}}
+               </select>
+            </div>
+            <div class="inputDiv">
+               <label for="memberheight"> Height(metres)</label><br>
+               <input class="major" id="memberheight" type="number" name="memberheight" step="0.01" min="0" required />
+            </div>
+            <div class="inputDiv">
+               <label for="memberweight"> Weight(kg)</label><br>
+               <input class="major" id="memberweight" type="number" name="memberweight" step="0.001" min="0" required />
+            </div>
+            <div class="centered">
+               <div class="row">
+                  <div class="col-sm-6"><input type="submit" value="Add Stats"></div>
+                  <div class="col-sm-6"> <input type="button" onclick="window.location.href='/gymMember'" id="cancel"
+                        value="Cancel"></div>
+               </div>
+            </div>
+         </form>
+      </div>
+   </div>
+</div>

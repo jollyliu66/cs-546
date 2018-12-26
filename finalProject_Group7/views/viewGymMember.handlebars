@@ -1,0 +1,41 @@
+<div class="content">
+   <div class="container-fluid">
+      <div class="jumbotron" id="head-doc">
+         <header>
+            <h1>{{member.membername}}</h1>
+               <p id="editOption"><a  href="/gymMember/update/{{member._id}}"><img src="../../public/images/Editing-edit-icon.png">
+               </a> | <a href="/gymMember/delete/{{member._id}}"><img src="../../public/images/delete.png"></a></p>
+            
+         </header>
+         {{#if msg}}
+            <p class="successMsg">{{msg}}</p>
+         {{/if}}
+         <div class="row">
+            <div class="col-sm-9">
+               <div class="view" id="description">
+                  <h4>ABOUT</h4>
+                  <p>I am a Gym Freak!</p>
+               </div>
+            </div>
+            <div class="col-sm-3">
+               <div class="view" id="member">
+                  <h4>MemeberName</h4>
+                  <p>{{member.membername}}</p>
+               </div>
+               <div class="view" id="">
+                  <h4>WEIGHT</h4>
+                  <p>{{member.memberweight}}</p>
+               </div>
+               <div class="view" id="membershipPlan">
+                  <h4>HEIGHT</h4>
+                  <p>{{member.memberheight}}</p>
+               </div>
+               <div class="view" id="membershipPlan">
+                  <h4>BMI</h4>
+                  <p>{{member.bmi}}</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

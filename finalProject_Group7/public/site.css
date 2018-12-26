@@ -1,0 +1,144 @@
+#head-banner{
+    background:url("images/background.jpg");
+    color:white;
+    background-repeat: no-repeat;
+    background-size: cover;
+     position:relative;
+    height:100vh;
+    vertical-align: middle;
+}
+.vertical-center{
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+  display: flex;
+  align-items: center;
+  background-color:transparent ;
+    text-align:center;
+}
+.alert{
+    color:red !important;
+    padding:0px;
+    margin:0px;
+    background-color:transparent !important ;
+}
+.successMsg{
+    color:rgb(21, 255, 0) !important;
+    padding:0px;
+    margin:0px;
+    background-color:transparent !important ;
+}
+.center {
+    margin: auto;
+    width: 100%;
+    padding: 10px;
+}
+h1{
+    font-weight:bolder;
+    font-size:400% !important;
+    font-family: 'Rubik Mono One', sans-serif !important;
+    text-shadow:2px 5px 10px black;
+}
+#login-panel{
+     height:100vh;    
+}
+input[type="text"],[type="password"]{
+    padding:5px;
+}
+input[type="submit"]{
+    width:380px;
+    padding:5px;
+    background-color: darkgreen;
+    border-color:transparent;
+    color:white;
+}
+.workoutActivity{
+    margin-left: 200pts;
+    
+}
+
+.workoutMember{
+    margin-left: 200pts;
+    
+}
+.content {
+    font-family: 'Montserrat', sans-serif !important;
+
+}
+#head-doc {
+    padding-top:0px !important;
+    
+}
+header{
+    padding-top:20px;
+    padding-bottom:2px;
+}
+
+header h1{
+    font-size:300% !important;
+    font-family: 'Montserrat', sans-serif !important;
+    text-shadow:none;
+}
+.alertMsg{
+    color:red !important;
+    padding:0px;
+    margin:0px;
+    background-color:transparent !important ;
+    text-align: center;
+    font-size:100% !important;
+}
+.successMsg{
+    color:rgb(6, 218, 87) !important;
+    padding:0px;
+    margin:0px;
+    background-color:transparent !important ;
+    text-align: center;
+    font-size:100% !important;
+}
+.inputDiv{
+
+    margin-left:0px;
+    margin-right:0px;
+    margin-bottom: 1.5%;
+}
+.inputDiv label{
+    font-weight: normal !important;
+    font-size:70%;
+}
+.inputDiv input:focus,select:focus,textArea:focus{
+    outline:none;
+    border-bottom:1px solid darkgoldenrod !important;
+}
+.inputDiv select{
+   padding:3px !important;
+}
+.inputDiv input,select{
+    
+    width:100% !important;
+    padding:1px;
+    border-color:transparent;
+    border-bottom: 1px solid lightgrey;
+    
+}
+
+.jumbotron{
+    background-color:transparent !important;
+    
+}
+#cancel{
+    background-color:darkgray
+}
+.centered {
+    position:absolute;
+    left: 40%;
+    
+
+}
+
+#createUser-form input[type="submit"],[type="button"]{
+    width:200px !important;
+    background-color:forestgreen;
+    color:white;
+    padding:10px;
+    margin:2%;
+    border-radius:25px;
+}

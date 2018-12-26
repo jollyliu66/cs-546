@@ -1,0 +1,29 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-8 vertical-center" id="head-banner">
+            <div class="center">
+                <h1>Aesthetic Pulse</h1><hr>
+            </div>
+
+        </div>
+        <div class="col-sm-4  vertical-center" id="login-panel">
+            <div class="login-div center">
+                <h3>ACCOUNT LOGIN</h3>{{#if error}}
+                <p class=" jumbotron alert">{{error}}</p>
+                {{/if}}
+                {{#if logoutMsg}}
+                <p class=" jumbotron successMsg">{{logoutMsg}}</p>
+                 {{/if}}
+                <form id="login-form" method="POST" action="/login">
+                    <input type="text" name="username" id="username" placeholder="username">
+                    <input type="password" name="password" id="password" placeholder="password"><br><br>
+                    <input type="submit" value="LogIn">
+                </form>
+                <br>
+                <a href="/signUp">Sign Up !</a>
+            </div>
+
+
+        </div>
+    </div>
+</div>

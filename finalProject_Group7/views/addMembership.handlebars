@@ -1,0 +1,41 @@
+<div class="content">
+   <div class="container-fluid">
+      <div class="jumbotron" id="head-doc">
+         <header>
+            <h1>New Membership</h1>
+         </header>
+         <form id="createMembership-form" action="/membership/add" method="POST">
+          {{#if alertMsg}}
+            <p class="alertMsg">{{alertMsg}}</p>
+            {{/if }}
+            <div class="inputDiv">
+               <label for="membershipname"> Membership Name</label><br>
+               <input class="major" type="text" id="membershipname" name="membershipname" pattern="[A-Za-z\s]{1,15}" title="Must contain only text" required/>
+            </div>
+            <div class="inputDiv">
+               <label for="membershipperiod">Membership Period(days)</label><br>
+               <input class="major" type="number" id="membershipperiod" name="membershipperiod" min="1" max="365" required/>
+            </div>
+            <div class="inputDiv">
+               <label for="signupfees">Signup Fees($)</label><br>
+               <input class="major" type="number" name="signupfees"  id="signupfees" min="100" max="1000" required/>
+            </div>
+            <div class="inputDiv">
+               <label for="services">Services</label><br>
+                  <input class="major" id="services" type="text" name="services"  pattern="[A-Za-z\s]{1,15}" title="Must contain only text" required/>
+            </div>
+              <div id="inputDiv">
+               <label for="description">Description</label><br>
+                   <textarea name="description"  id="description" placeholder="Enter Your Desciption Here.." required></textarea>
+
+             </div>
+            <div class="centered">
+               <div class="row">
+                  <div class="col-sm-6"><input type="submit" value="Create Membership"></div>
+                  <div class="col-sm-6"> <input type="button" onclick="window.location.href='/membership'" id="cancel" value="Cancel"></div>
+               </div>
+            </div>
+         </form>
+      </div>
+   </div>
+</div>

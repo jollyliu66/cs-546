@@ -1,0 +1,37 @@
+<div class="content">
+   <div class="container-fluid">
+      <div class="jumbotron" id="head-doc">
+         <header>
+            <h1>{{membership.membershipname}} Membership</h1>
+             {{#if permission}}
+               <p id="editOption"><a  href="/membership/update/{{membership._id}}"><img alt="Update Membership" src="../../public/images/Editing-edit-icon.png"></a> | <a href="/membership/delete/{{membership._id}}"><img alt="delete Membership" src="../../public/images/delete.png"></a></p>
+             {{/if}}
+         </header>
+         {{#if msg}}
+            <p class="successMsg">{{msg}}</p>
+         {{/if}}
+         <div class="row">
+            <div class="col-sm-9">
+               <div class="view" id="description">
+                  <h4>ABOUT</h4>
+                  <p>{{membership.description}}</p>
+               </div>
+            </div>
+            <div class="col-sm-3">
+               <div class="view" id="membershipperiod">
+                  <h4>MEMBERSHIP PERIOD</h4>
+                  <p>{{membership.membershipperiod}}</p>
+               </div>
+               <div class="view" id="signupfees">
+                  <h4>SIGNUP FEES</h4>
+                  <p>{{membership.signupfees}}</p>
+               </div>
+               <div class="view" id="services">
+                  <h4>SERVICES</h4>
+                  <p>{{membership.services}}</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

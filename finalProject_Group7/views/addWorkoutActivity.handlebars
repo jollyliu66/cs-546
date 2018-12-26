@@ -1,0 +1,75 @@
+<div class="content">
+    <div class="container-fluid">
+        <div class="jumbotron" id="head-doc">
+            <header>
+                <h1>Create Workout</h1>
+                <h2>{{userName}}</h2>
+            </header>
+            <form id="add-activity" action="/workoutActivity/add/" method="POST">
+                <div class="inputDiv">
+                    <label for="activityname">Activities</label><br>
+                    <select id="activityname" name="activityname" required>
+                        <option value="">Choose</option>
+                        {{#each activity}}
+                        <option  value="{{this.activityname}}">{{{this.activityname}}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+                <div class="row inputDiv">
+                    <div class="col-sm-4">
+                        <label for="level">Level</label><br>
+                        <select id="level" name="level" required>
+                             <option value="">Choose</option>
+                            <option value="low">Low</option>
+                            <option  value="Medium">Medium</option>
+                            <option  value="High">High</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-4">
+                        <label for="startdate">Start Date </label><br>
+                        <input type="date" id="startdate" name="startdate" required>
+                    </div>
+                    <div class="col-sm-4">
+                        <label for="enddate">End Date</label><br>
+                        <input type="date" id="enddate" name="enddate" required/>
+                    </div>
+                </div>
+                <div class="checkBox inputDiv">
+                    <label >Days</label>
+                    <label><input type="checkbox" name="days" value="Monday" >Monday</label>
+                    <label><input type="checkbox" name="days" value="Tuesday">Tuesday</label>
+                    <label><input type="checkbox" name="days" value="Wednesday">Wednesday</label>
+                    <label><input type="checkbox" name="days" value="Thursday">Thursday</label>
+                    <label><input type="checkbox" name="days" value="Friday">Friday</label>
+                    <label><input type="checkbox" name="days" value="Saturday">Saturday</label>
+                </div>
+                <div class="row inputDiv">
+                    <div class="col-sm-4">
+                        <label for="sets"> Sets </label><br>
+                        <input type="number" id="sets" name="sets" min = "1" required/>
+                    </div>
+                    <div class="col-sm-4">
+                        <label for="weight"> Weight(kg)</label><br>
+                        <input type="number" id="weight" name="weight" min ="1" step="0.001" required/>
+                    </div>
+                    <div class="col-sm-4">
+                        <label for="repetitions"> Repetitions</label><br>
+                        <input type="number" id="repetitions" name="repetitions" min = "0" required/>
+                    </div>
+                </div>
+                <div class="inputDiv">
+                    <label for="description">Description </label><br>
+                    <textarea id="description" name="description" required></textarea>
+                </div>
+                <input type="hidden" value={{userId}} name="userId">
+                <div class="centered">
+                    <div class="row">
+                        <div class="col-sm-6"><input type="submit" value="Create Workout"></div>
+                        <div class="col-sm-6"> <input type="button" onclick="window.location.href='/activity'" id="cancel"
+                                value="Cancel"></div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,52 @@
+<div class="content">
+   <div class="container-fluid">
+      <div class="jumbotron" id="head-doc">
+         <header>
+            <h1><a href="../"><img alt="go Back" src="../../public/images/backSign.png"></a>{{user.firstname}} {{user.lastname}}</h1>
+            {{#if permission}}
+            <p id="editOption"><a href="/user/update/{{user._id}}"><img alt="edit" src="../../public/images/Editing-edit-icon.png"></a>
+               | <a href="/user/delete/{{user._id}}"><img alt="delete" src="../../public/images/delete.png"></a>
+            </p>
+            {{/if}}
+         </header>
+         <br>
+         <div class="row" id="profile">
+            {{#if msg}}
+            <p class="successMsg">{{msg}}</p>
+            {{/if}}
+            <div class="col-sm-6 rightBar">
+               <div class="innerDiv">
+                  <h3>Account Info</h3>
+                  <hr>
+                  <h4>Username</h4>
+                  <p>{{user.username}}</p>
+                  <h4>Role</h4>
+                  <p>{{user.role}}</p>
+               </div>
+               <div class="innerDiv">
+                  <h3>Gender, Birthday and More</h3>
+                  <hr>
+                  <h4>Gender</h4>
+                  <p>{{user.gender}}</p>
+                  <h4>Birthday</h4>
+                  <p>{{user.dob}}</p>
+               </div>
+            </div>
+            <div class="col-sm-6 leftBar">
+               <div class="innerDiv">
+                  <h3>Contact Info</h3>
+                  <hr>
+                  <h4>Address</h4>
+                  <p>{{user.aptno}} {{user.streetAddress}} {{user.city}} {{user.state}} {{user.country}}
+                     {{user.zipCode}}
+                  </p>
+                  <h4>Cell Phone</h4>
+                  <p>{{user.mobile}}</p>
+                  <h4>Email</h4>
+                  <p>{{user.email}}</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

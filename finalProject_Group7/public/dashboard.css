@@ -1,0 +1,417 @@
+header{
+    padding-top:20px;
+    padding-bottom:2px;
+}
+
+.sidenav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav a {
+    padding: 5px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 120%;
+    color: white;
+   
+    display: block;
+}
+label{
+    width:110px;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+     text-decoration:none;
+}
+textarea{
+    width:100%;
+    height:250px;
+}
+#head-doc {
+    padding-top:0px;
+    
+}
+#cancel{
+    background-color:darkgray
+}
+.content {
+    margin-left: 160px;
+    font-family: 'Montserrat', sans-serif;
+
+}
+.centered {
+    position:absolute;
+    left: 40%;
+    
+
+}
+.activity{
+    box-shadow: 2px 3px 4px grey;
+    padding:13px;
+    border:1px solid darkgrey;
+    height:250px;
+    margin:10px;
+}
+.activityname{
+
+    font-size:25px;
+    font-weight: bold;
+    display:block;
+  
+}
+#add{
+    box-shadow: 2px 3px 4px grey;
+    padding:20px;
+    border:1px solid darkgrey;
+    height:250px;
+    margin:10px;
+}
+#add img{
+    height: 100%;
+}
+.menuOption{
+    align-self:right;
+}
+span{
+    margin:2px;
+    padding:10px;
+}
+.activity img{
+    border-radius:100%;
+    height:80px;
+    width:80px;
+    position: relative;
+    bottom:50px;
+    left:10px;
+    display: block;
+   
+}
+.center{
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+}
+.activity hr{
+   border-color:lightgrey !important;
+}
+.plan{
+    text-align:right;
+    font-size:5px;
+    padding:0px !important;
+    margin:-2px;
+}
+
+.activity a{
+    color:black;
+    text-decoration: none;
+}
+.activity a:visited{
+    color:black;
+    text-decoration: none;
+}
+.activity a:hover{
+    color:black;
+    text-decoration: none;
+}
+.jumbotron{
+    background-color:transparent !important;
+    
+}
+.inputDiv{
+
+    margin-left:0px;
+    margin-right:0px;
+    margin-bottom: 1.5%;
+}
+input:focus,select:focus,textArea:focus{
+    outline:none;
+    border-bottom:1px solid darkgoldenrod !important;
+}
+select{
+   padding:3px !important;
+}
+input,select{
+    
+    width:100% !important;
+    padding:1px;
+    border-color:transparent;
+    border-bottom: 1px solid lightgrey;
+    
+}
+#panel{
+    border-left: 1px solid lightgrey;
+     
+    padding:25px;
+}
+#inputDiv .col-sm-4{
+      padding:0px;
+    margin:0px;
+     padding-right:5%;
+    
+}
+
+input[type="submit"],[type="button"]{
+    width:200px !important;
+    background-color:forestgreen;
+    color:white;
+    padding:10px;
+    margin:2%;
+    border-radius:25px;
+}
+select{
+   width:50%; 
+}
+label{
+    font-weight: normal !important;
+    font-size:70%;
+}
+hr{
+    border-color:black !important;
+}
+
+h1{
+    font-size:300% !important;
+}
+h4{
+    font-weight:bolder !important;
+    padding:1
+    
+}
+.alertMsg{
+    color:red !important;
+    padding:0px;
+    margin:0px;
+    background-color:transparent !important ;
+    text-align: center;
+    font-size:100% !important;
+}
+.successMsg{
+    color:rgb(6, 218, 87) !important;
+    padding:0px;
+    margin:0px;
+    background-color:transparent !important ;
+    text-align: center;
+     font-size:100% !important;
+}
+.view p{
+    text-align:justify;
+    font-size:19px !important;
+}
+.view h4{
+    font-size:15px ;
+}
+#editOption{
+    text-align:right;
+    padding:0px;
+    margin:0px;
+    font-size:15px;
+}
+#editOption img{
+    height:20px;
+}
+.thead-dark{
+    background-color:black;
+    color:white;
+}
+.clickable-row:hover{
+    cursor:pointer;
+    box-shadow:1px 2px 1px 0px darkgoldenrod  ;
+}
+#addOption{
+    text-align:right;
+    padding:0px;
+    margin:0px;
+    font-size:15px;
+
+}
+#addOption a{
+    color:black;
+    text-decoration: none;
+}
+#addOption img{
+    height:30px;
+}
+#profile p{
+    font-size: 18px;
+}
+#profile .innerDiv{
+    padding:10px;
+    padding-left:25px;
+    margin-bottom:20px;
+    box-shadow: 2px 2px 5px 1px;
+}
+
+#profile h3{
+    font-size:25px;
+    font-weight:bold;
+}
+#profile h4{
+    font-weight:normal !important;
+    font-size:13px;
+}
+h1 img{
+     height: 50px;;
+}
+#Workout-Selector{
+    margin:10px;
+}
+#Workout-Selector hr{
+    border-color:lightgray!important;
+
+}
+#Workout-Selector label{
+    padding:5px ;
+    font-size:15px;
+    padding-right:0px;
+    margin-right:0px;
+     width:auto;
+}
+#Workout-Selector .col-sm-1{
+
+    width:auto;
+}
+
+#Workout-Selector select{
+    border:none;
+    width:90% !important ;
+} 
+#Workout-Selector .col-sm-10{
+    padding:5px !important;
+    border:1px solid gray;
+    border-radius:25px;
+}
+#Workout-Selector img{
+    height:20px;
+}
+#Workout-Selector button{
+  padding:0px;
+    width:5% !important;
+    margin:0px;
+    border:none;
+    background-color:transparent !important;    
+}
+#Workout-Selector select:focus{
+    outline:none;
+    border-bottom:none !important;
+    
+    
+} 
+input[type=checkbox]{
+    width:auto !important;
+     margin-right:5% !important;
+ }
+ #workoutdays p{
+     width:auto;
+ }
+ .membershipname{   
+    font-size:200% !important;
+}
+.membership{
+    box-shadow: 2px 3px 4px grey;
+    padding:0px;
+    border:1px solid grey;
+    height:250px;
+    margin:10px;
+    
+}
+.membership a{
+    color:black;
+    text-decoration: none;
+}
+.membership a:visited{
+    color:black;
+    text-decoration: none;
+}
+.membership a:hover{
+    color:black;
+    text-decoration: none;
+}
+.membership hr{
+   border-color:lightgrey !important;
+}
+.decorative{
+    padding:20px;
+    height:100%;
+}
+#gymMember img{
+    height:20px;
+}
+.notice{
+    box-shadow: 2px 3px 4px grey;
+    padding:20px;
+ 
+    border:1px solid grey;
+    height:250px;
+    margin:10px;
+}
+.notice{
+    font-size:200% !important ;  
+}
+.notice a{
+    color:black;
+    text-decoration: none;
+}
+.notice a:visited{
+    color:black;
+    text-decoration: none;
+}
+.notice a:hover{
+    color:black;
+    text-decoration: none;
+    
+}
+.notice hr{
+   border-color:lightgrey !important;
+}
+.dashboard .dashboardUnit{
+    
+    padding:20px;
+    margin:5px;
+    box-shadow:1px 5px 6px 0px;
+    border:2px solid gray;
+    text-align:center;
+
+}
+
+.dashBoardbox{
+    padding:0px;
+    padding-left:15px;
+    padding-right:15px;
+}
+.dashBoardbox  h3{
+    text-align:left;
+}
+.toggle {
+    height:auto;
+    max-height:400px;
+     overflow-y:scroll;
+     padding:0px !important;
+     margin:0px !important;
+}
+.dashBoardbox .jumbotron{
+    padding:0px;
+    text-align:left;
+
+}
+.noticeList{
+ text-align:left;
+border-bottom:2px solid lightgrey;
+    padding:5px;
+    margin:5px;
+}
+.head{
+    font-size:800% !important;
+    font-style: bolder;
+}
+.base{
+    font-size:150% !important;
+}

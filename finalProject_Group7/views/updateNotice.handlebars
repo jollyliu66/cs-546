@@ -1,0 +1,50 @@
+<div class="content">
+   <div class="container-fluid">
+      <div class="jumbotron" id="head-doc">
+         <header>
+            <h1>Edit Notice</h1>
+         </header>
+         {{#if error}}
+         <p class="alertMsg">*{{error}}</p>
+         {{/if}}
+         {{#if alertMsg}}
+         <p class="alertMsg">*{{alertMsg}}</p>
+         {{/if}}
+         <form id="updateNotice-form" action="/notice/update" method="POST">
+            <div class="inputDiv">
+               <label for="title"> Notice Title</label><br>
+               <input class="major"   id="title" type="text" name="title" value="{{notice.title}}" required>
+            </div>
+            <div class="inputDiv">
+               <label for="content">Notice Content</label><br>
+               <input class="major" type="text" id="content" name="content" value="{{notice.content}}" size ="200" maxlength="200" required>
+            </div>
+            <div class="inputDiv">
+               <label for="startdate">Notice StartDate</label><br>
+               <input class="major" id="startdate" type="date" name="startdate"  required>
+            </div>
+            <div class="inputDiv">
+               <label for="enddate">Notice EndDate</label><br>
+               <input class="major" id="enddate" type="date" name="enddate"  required>
+            </div>
+            <div class="inputDiv">
+               <label for="noticeFor">Notice For</label><br>
+               <select id="noticeFor" name="noticeFor" required>
+                  <option value="">Choose</option>
+                  <option  value="Admin">Admin</option>
+                  <option value="Trainer">Trainer</option>
+                  <option  value="Member">Member</option>
+               </select>
+            </div>
+            <input type="hidden" name="noticeId" value="{{notice._id}}">
+            <div  class="centered">
+               <div class="row">
+                  <div class="col-sm-6"><input type="submit"  value="Update"></div>
+                  <div class="col-sm-6"> <input type="button" onclick="window.location.href='/notice/view/{{notice._id}}'"
+                                id="cancel" value="Cancel"></div>
+               </div>
+            </div>
+         </form>
+      </div>
+   </div>
+</div>

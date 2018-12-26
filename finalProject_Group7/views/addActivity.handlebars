@@ -1,0 +1,47 @@
+<div class="content">
+   <div class="container-fluid">
+      <div class="jumbotron" id="head-doc">
+         <header>
+            <h1>New Activity</h1>
+         </header>
+         <form id="createActivity-form" action="/activity/add" method="POST">
+            {{#if alertMsg}}
+            <p class="alertMsg">{{alertMsg}}</p>
+            {{/if }}
+            <div class="inputDiv">
+               <label for="activityname"> Activity Name</label><br>
+               <input class="major" type="text" id="activityname" name="activityname" pattern="[A-Za-z\s]{1,15}" title="Must contain only text" required/>
+            </div>
+            <div class="inputDiv">
+               <label for="activitytrainer">Activity Trainer</label><br>
+               <select id="activitytrainer" name="activitytrainer" required>
+                <option value="">Choose</option>
+                  {{#each trainerList}}
+                     <option value="{{this.trainername}}">{{this.trainername}}</option>
+                  {{/each}}
+               </select>
+            </div>
+            <div class="inputDiv">
+               <label for="membershipplan">Membership Plan</label><br>
+               <select id="membershipplan" name="membershipplan" required>
+                   <option value="">Choose</option>
+                  <option  value="Gold">Gold</option>
+                  <option  value="Platinum">Platinum</option>
+                  <option  value="Diamond">Diamond</option>
+                  <option  value="Silver">Silver</option>
+               </select>
+            </div>
+            <div class="inputDiv">
+               <label for="activityDescription">Description</label><br>
+               <textarea name="activityDescription" id="activityDescription" placeholder="Enter Your Desciption Here.." required></textarea>
+            </div>
+            <div class="centered">
+               <div class="row">
+                  <div class="col-sm-6"><input type="submit" value="Create Activity"></div>
+                  <div class="col-sm-6"> <input type="button" onclick="window.location.href='../'" id="cancel" value="Cancel"></div>
+               </div>
+            </div>
+         </form>
+      </div>
+   </div>
+</div>

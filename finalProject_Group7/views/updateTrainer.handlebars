@@ -1,0 +1,47 @@
+<div class="content">
+    <div class="container-fluid">
+        <div class="jumbotron" id="head-doc">
+            <header>
+                <h1>Edit Trainer</h1>
+            </header>
+
+            {{#if error}}
+            <p class="alertMsg">*{{error}}</p>
+            {{/if}}
+            <p>{{alertMsg}}</p>
+            <form id="createTrainer-form" action="/trainer/update" method="POST">
+
+                <div class="inputDiv">
+                    <label for="trainername">Trainer</label>
+
+                    <select id="trainername" name="trainername" required>
+                        <option value="">Choose</option>
+
+                        {{#each trainernames}}
+                        <option value="{{this.username}}">{{this.username}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+
+                <div class="inputDiv">
+                    <label for="certifications"> Certifications</label><br>
+                    <input class="major" id="certifications" type="text" value="{{trainer.certifications}}" name="certifications"
+                        required>
+                </div>
+
+                <div class="inputDiv">
+                    <label for="biography">Biography</label><br>
+                    <textarea id="biography" name="biography" required>{{trainer.biography}}</textarea>
+                </div>
+                <input type="hidden" id="trainerId" name="trainerId" value="{{trainerId}}">
+                <div class="centered">
+                    <div class="row">
+                        <div class="col-sm-6"><input type="submit" value="Update"></div>
+                        <div class="col-sm-6"> <input type="button" onclick="window.location.href='/trainer/view/{{trainer._id}}'"
+                                id="cancel" value="Cancel"></div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

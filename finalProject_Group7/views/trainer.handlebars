@@ -1,0 +1,37 @@
+<div class="content">
+    <div class="container-fluid">
+        <div class="jumbotron" id="head-doc">
+            <header>
+                <h1>Trainer</h1>
+            </header>
+            <main>
+                <p>{{message}}</p>
+                {{#if permission}}
+                <p id="addOption"><a href="/trainer/add"><img alt="add Certification" src="../public/images/add.png">Add Certifications</a></p>
+                {{/if}}
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Trainer Name</th>
+                            <th scope="col">Certification</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#if trainer}}
+                        {{#each trainer}}
+                        <tr class="clickable-row" data-href='/trainer/view/{{this._id}}'>
+                            <th scope="row">{{@index}}</th>
+                            <td>{{this.trainername}} </td>
+                            <td>{{this.certifications}}</td>
+
+                        </tr>
+                        {{/each}}
+                        {{/if }}
+                    </tbody>
+                </table>
+            </main>
+        </div>
+    </div>
+</div>

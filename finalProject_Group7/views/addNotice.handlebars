@@ -1,0 +1,47 @@
+<div class="content">
+   <div class="container-fluid">
+      <div class="jumbotron" id="head-doc">
+         <header>
+            <h1>New Notice</h1>
+         </header>
+         <form id="createNotice-form" action="/notice/add" method="POST">
+            {{#if alertMsg}}
+            <p class="alertMsg">{{alertMsg}}</p>
+            {{/if }}
+            <div class="inputDiv">
+               <label for="title"> Notice Title</label><br>
+               <input class="major" id="title" type="text" name="title" required />
+            </div>
+             <div id="inputDiv">
+               <label for="content">Notice Content</label><br>
+                <input class="major" type="text" id="content" name="content" size ="200" maxlength="200" required />
+            </div>
+            <div class="inputDiv">
+               <label for="startdate">Notice Startdate</label><br>
+               <input class="major" type="date" id="startdate" name="startdate"  required/>
+            </div>
+            <div class="inputDiv">
+               <label for="enddate">Notice Enddate</label><br>
+               <input class="major" id="enddate" type="date" name="enddate"  required/>
+            </div>
+             <div class="inputDiv">
+               <label for="noticeFor">Notice For</label><br>
+                <select id="noticeFor" name="noticeFor" required>
+                    <option value="">Choose</option>
+                    <option  value="Admin">Admin</option>
+                    <option  value="Trainer">Trainer</option>
+                    <option  value="Member">Member</option>
+                </select>
+               
+            </div>
+
+            <div class="centered">
+               <div class="row">
+                  <div class="col-sm-6"><input type="submit" value="Create Notice"></div>
+                  <div class="col-sm-6"> <input type="button" onclick="window.location.href='/notice'" value="Cancel"></div>
+               </div>
+            </div>
+         </form>
+      </div>
+   </div>
+</div>

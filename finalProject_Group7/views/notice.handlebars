@@ -1,0 +1,29 @@
+<div class="content">
+    <div class="container-fluid">
+        <div class="jumbotron" id="head-doc">
+            <header>
+                <h1>Notice</h1>
+            </header>
+            <main>
+                <p>{{message}}</p>
+                <div class="row">
+                    {{#if notice}}
+                    {{#each notice}}
+                    <div class="col-sm-3 notice">
+                        <a href="/notice/view/{{this._id}}">
+                            {{this.title}}
+                            <hr>
+                        </a>
+                    </div>
+                    {{/each}}
+                    {{/if }}
+                    {{#if permission}}
+                    <div class="col-sm-3" id="add">
+                        <a href="notice/add"><img alt="Add notice" src="../public/images/add.png"></a>
+                    </div>
+                    {{/if}}
+                </div>
+            </main>
+        </div>
+    </div>
+</div>

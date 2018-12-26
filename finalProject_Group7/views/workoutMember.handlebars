@@ -1,0 +1,41 @@
+<div class="content">
+    <div class="container-fluid">
+        <div class="jumbotron" id="head-doc">
+            <header>
+                <h1>Workout Schedule</h1>
+            </header>
+            <main>
+                {{#if flag}}
+                <p class="error">{{error}}</p>
+                {{/if}}
+
+
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Activity</th>
+                            <th scope="col">Level</th>
+                            <th scope="col">Assigned Date</th>
+                            <th scope="col">Expires on</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#if activity}}
+                        {{#each activity}}
+                        <tr class="clickable-row" data-href='/workoutMember/view/{{this._id}}'>
+                            <th scope="row">{{@index}}</th>
+                            <td>{{this.activity}}</td>
+                            <td>{{this.level}} </td>
+                            <td>{{this.startdate}}</td>
+                            <td>{{this.enddate}}</td>
+                        </tr>
+                        {{/each}}
+                        {{/if}}
+
+                    </tbody>
+                </table>
+            </main>
+        </div>
+    </div>
+</div>

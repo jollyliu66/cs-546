@@ -1,0 +1,31 @@
+<div class="content">
+   <div class="container-fluid">
+      <div class="jumbotron" id="head-doc">
+         <header>
+            <h1>{{trainer.trainername}} Trainer</h1>
+             {{#if permission}}
+            <p id="editOption"><a href="/trainer/update/{{trainer._id}}"><img  alt="Update Trainer" src="../../public/images/Editing-edit-icon.png"></a>
+               | <a href="/trainer/delete/{{trainer._id}}"><img alt="Delete Trainer" src="../../public/images/delete.png"></a></p>
+             {{/if}}
+         </header>
+         {{#if msg}}
+         <p class="successMsg">{{msg}}</p>
+         {{/if}}
+         <div class="row">
+            <div class="col-sm-9">
+               <div class="view" id="description">
+                  <h4>Biography</h4>
+                  <p>{{trainer.biography}}</p>
+               </div>
+            </div>
+            <div class="col-sm-3">
+               <div class="view" id="activityTrainer">
+                  <h4>Certifications</h4>
+                  <p>{{trainer.certifications}}</p>
+               </div>
+               
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

@@ -1,0 +1,42 @@
+<div class="content">
+   <div class="container-fluid">
+      <div class="jumbotron" id="head-doc">
+         <header>
+            <h1> Notice</h1>
+             {{#if permission}}
+            <p id="editOption"><a href="/notice/update/{{notice._id}}"><img alt="update notice" src="../../public/images/Editing-edit-icon.png"></a>
+               | <a href="/notice/delete/{{notice._id}}"><img alt="delete notice" src="../../public/images/delete.png"></a></p>
+             {{/if}}
+         </header>
+         {{#if msg}}
+         <p class="successMsg">{{msg}}</p>
+         {{/if}}
+         <div class="row">
+            <div class="col-sm-9">
+               <div class="view" id="title">
+                  <h4>Title</h4>
+                  <p>{{notice.title}}</p>
+               </div>
+               <div class="view" id="content">
+                  <h4>Content</h4>
+                  <p>{{notice.content}}</p>
+               </div>
+            </div>
+            <div class="col-sm-3">
+               <div class="view" id="startdate">
+                  <h4>StartDate</h4>
+                  <p>{{notice.startdate}}</p>
+               </div>
+               <div class="view" id="enddate">
+                  <h4>EndDate</h4>
+                  <p>{{notice.enddate}}</p>
+               </div>
+               <div class="view" id="noticeFor">
+                  <h4>Notice For</h4>
+                  <p>{{notice.noticeFor}}</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

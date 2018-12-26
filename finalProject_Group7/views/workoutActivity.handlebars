@@ -1,0 +1,30 @@
+<div class="content">
+   <div class="container-fluid">
+      <div class="jumbotron" id="head-doc">
+         <header>
+            <h1>Workout Activity</h1>
+         </header>
+         {{#if message}}
+         <p>{{message}}</p>
+         {{/if}}
+         <div id="Workout-Selector">
+            <form id="workout-activity" method="GET">
+               <div class="row">
+                  <div class="col-sm-1"><label for="username">Select User</label></div>
+                  <div class="col-sm-10">
+                     <select id="username" name="username">
+                        <option value="">Choose</option>
+                        {{#each username}}
+                        <option  value="{{this._id}}">{{{this.username}}}</option>
+                        {{/each}}
+                     </select>
+                     <button type="button" id="viewWorkout"><img  alt="search" src="../../public/images/searchIcon.png"></button>
+                  </div>
+               </div>
+            </form>
+            <hr>
+            <div id="resultDiv"></div>
+         </div>
+      </div>
+   </div>
+</div>

@@ -1,0 +1,39 @@
+<div class="content">
+   <div class="container-fluid">
+      <div class="jumbotron" id="head-doc">
+         <header>
+            <h1>User Module</h1>
+            {{#if permission}}
+            <p id="addOption"><a  href="/user/add"><img src="../public/images/add.png" alt="Add User">New User</a></p>
+            {{/if}}
+         </header>
+         <main>
+            <p>{{message}}</p>
+            <table class="table">
+               <thead class="thead-dark">
+                  <tr>
+                     <th scope="col">#</th>
+                     <th scope="col">Name</th>
+                     <th scope="col">Role</th>
+                     <th scope="col">Gender</th>
+                     <th scope="col">E-Mail</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  {{#if users}}
+                  {{#each users}}
+                  <tr class="clickable-row" data-href='/user/view/{{this._id}}' >
+                     <th scope="row">{{@index}}</th>
+                     <td>{{this.firstname}} {{this.lastname}}</td>
+                     <td>{{this.role}}</td>
+                     <td>{{this.gender}}</td>
+                     <td>{{this.email}}</td>
+                  </tr>
+                  {{/each}}
+                  {{/if }} 
+               </tbody>
+            </table>
+         </main>
+      </div>
+   </div>
+</div>

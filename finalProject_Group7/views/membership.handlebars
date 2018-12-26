@@ -1,0 +1,33 @@
+<div class="content">
+    <div class="container-fluid">
+        <div class="jumbotron" id="head-doc">
+            <header>
+                <h1>Membership</h1>
+            </header>
+            <main>
+                <p>{{message}}</p>
+                <div class="row">
+                    {{#if memberships}}
+                    {{#each memberships}}
+                    <div class="col-sm-3 membership">
+                        <div class="decorative">
+                        <a href="/membership/view/{{this._id}}">
+                            <p>${{this.signupfees}}</p>
+                            <p class="membershipname">{{this.membershipname}}</p>
+                            <hr>
+                            <p class="duration">{{this.membershipperiod}} Days</p>
+                        </a>
+                        </div>
+                    </div>
+                {{/each}}
+                {{/if }}
+                 {{#if permission}}
+                <div class="col-sm-3" id="add">
+                    <a href="membership/add"><img    src="../public/images/add.png" alt="add Membership"></a>
+                </div>
+                {{/if}} 
+        </div>
+        </main>
+    </div>
+</div>
+</div>

@@ -1,0 +1,41 @@
+<div class="content">
+   <div class="container-fluid">
+      <div class="jumbotron" id="head-doc">
+         <header>
+            <h1>Add Certifications for Trainer</h1>
+         </header>
+         <form id="createActivity-form" action="/trainer/add" method="POST">
+            {{#if alertMsg}}
+            <p class="alertMsg">{{alertMsg}}</p>
+            {{/if }}
+            <div class="inputDiv">
+               <label for="trainername">Trainer</label>
+
+               <select id="trainername" name="trainername" required>
+                  <option value="">Choose</option>
+
+                  {{#each trainernames}}
+                  <option  value="{{this.username}}">{{this.username}}</option>
+                  {{/each}}
+               </select>
+            </div>
+            <div class="inputDiv">
+               <label for="certifications"> Certifications </label><br>
+               <input class="major" type="text" id="certifications" name="certifications" required />
+            </div>
+
+            <div class="inputDiv">
+               <label for="biography">Biography</label><br>
+               <textarea name="biography" id="biography" placeholder="Enter Your Biography Here.." required></textarea>
+            </div>
+            <div class="centered">
+               <div class="row">
+                  <div class="col-sm-6"><input type="submit" value="Create Trainer"></div>
+                  <div class="col-sm-6"> <input type="button" onclick="window.location.href='/trainer'" id="cancel"
+                        value="Cancel"></div>
+               </div>
+            </div>
+         </form>
+      </div>
+   </div>
+</div>

@@ -1,0 +1,33 @@
+{{#if flag}}
+<p class="error">{{error}}</p>
+{{/if}}
+
+<h2>{{userName}}</h2>
+{{#if permission}}
+<p id="addOption"><a href="/workoutActivity/add/{{userId}}"><img alt="add" src="../public/images/add.png">New Workout</a>
+{{/if}}
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Activity</th>
+                <th scope="col">Level</th>
+                <th scope="col">Assigned Date</th>
+                <th scope="col">Expires on</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#if showactivities}}
+            {{#each showactivities}}
+            <tr class="clickable-row" data-href='/workoutActivity/view/{{this._id}}'>
+                <th scope="row">{{@index}}</th>
+                <td>{{this.activity}}</td>
+                <td>{{this.level}} </td>
+                <td>{{this.startdate}}</td>
+                <td>{{this.enddate}}</td>
+            </tr>
+            {{/each}}
+            {{/if}}
+
+        </tbody>
+    </table>

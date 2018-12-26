@@ -1,0 +1,71 @@
+<div class="content">
+    <div class="container-fluid">
+
+        <header>
+            <h1>View Activity</h1>
+
+        </header>
+
+        <body>
+            <form id="view-activity" action="/workoutMember/view" method="POST">
+                <p>{{message}}</p>
+
+            </form>
+            {{#if flag}}
+            <p class="error">{{error}}</p>
+
+            {{/if}}
+
+
+            {{#if showactivities}}
+            <table name="result" style="width:100%">
+                <tr>
+
+                    <th>ID</th>
+                    <th>Level</th>
+                    <th>Description</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Days</th>
+                    <th>Activity</th>
+                    <th>Sets</th>
+                    <th>Weight</th>
+                    <th>Repetitions</th>
+                </tr>
+                {{#each showactivities}}
+                <tr name="row">
+                    <form method="POST" action="/workoutMember/update">
+                        {{#if message}}
+                        <p class="message">{{message}}</p>
+                        {{/if }}
+                        <td><input type="text" name="activityId" value={{this._id}}> </td>
+                        <td><input type="text" name="activitylevel" value={{this.level}}></td>
+                        <td><input type="text" name="activitydescription" value={{this.description}}></td>
+                        <td><input type="text" name="activitystartdate" value={{this.startdate}}></td>
+                        <td><input type="text" name="activityenddate" value={{this.enddate}}></td>
+                        <td><input type="text" name="days" value={{this.days}}></td>
+                        <td><input type="text" name="activity" value={{this.activity}}></td>
+                        <td><input type="text" name="sets" value={{this.sets}}></td>
+                        <td><input type="text" name="weight" value={{this.weight}}></td>
+                        <td><input type="text" name="repetitions" value={{this.repetitions}}></td>
+                        <td><input type="submit" value="Update"></td>
+                    </form>
+                    <td>
+                        <form method="POST" action="/workoutMember/delete">
+                            <input type="hidden" value={{this._id}} name="activityId">
+                            <input type="submit" value="Delete">
+                        </form>
+                    </td>
+                </tr>
+                {{/each}}
+            </table>
+            {{/if}}
+            <br />
+            <br />
+            <p>{{message}}</p>
+            <a href="/workoutMember">Go back</a>
+
+
+        </body>
+    </div>
+</div>

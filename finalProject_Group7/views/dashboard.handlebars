@@ -1,0 +1,68 @@
+<div class="content">
+   <div class="container-fluid">
+      <div class="jumbotron" id="head-doc">
+         <header>
+            <h1>Hi {{firstname}}!</h1>
+         </header>
+         <div class="dashboard">
+            <div class="row">
+               <div class="col-sm-3 dashboardUnit">
+                  <p class="head" >{{gymMemberCount}}</p>
+                  <p class="base" >Total Gym Members</p>
+               </div>
+               <div class="col-sm-3 dashboardUnit">
+                  <p class="head" >{{trainerCount}}</p>
+                  <p class="base" >Total Trainer</p>
+               </div>
+               <div class="col-sm-4 dashboardUnit dashBoardbox" id="activityBox" >
+                  <h3>Activity</h3>
+                  <hr>
+                  <div class="jumbotron toggle" id="activitytoggle" data-spy="scroll" data-target="#myScrollspy"
+                     data-offset="2">
+                     <table class="table">
+                        <tbody>
+                           {{#if activity}}
+                           {{#each activity}}
+                           <tr>
+                              <td>{{this.activityname}}</td>
+                           </tr>
+                           {{/each}}
+                           {{/if}}
+                           {{#else}}
+                           No Activity to show!
+                           {{/else}}
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="col-sm-6 dashboardUnit dashBoardbox" id="noticesBox">
+                  <h3>Active Notice</h3>
+                  <hr>
+                  <div class="jumbotron toggle" id="noticetoggle" data-spy="scroll" data-target="#myScrollspy"
+                     data-offset="2">
+                     <table class="table">
+                        <tbody>
+                           {{#if notice}}
+                           {{#each notice}}
+                           <tr class="clickable-row" data-href='/notice/view/{{this._id}}'>
+                              <td>{{@index}}</td>
+                              <td>{{this.title}}</td>
+                           </tr>
+                           {{/each}}
+                           {{/if}}
+                           {{#else}}
+                           No notice to show!
+                           {{/else}}
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="col-sm-4 dashboardUnit">
+                  <p class="head">{{date}}</p>
+                  <p class="base">{{month}} {{year}}</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

@@ -1,0 +1,46 @@
+<div class="content">
+    <div class="container-fluid">
+        <div class="jumbotron" id="head-doc">
+            <header>
+                <h1>Gym Member</h1>
+            </header>
+            <main>
+                <p>{{message}}</p>
+                {{#if permission}}
+                <p id="addOption"><a href="/gymMember/add"><img alt="add gym Member" src="../public/images/add.png">Add
+                        Member Stats</a></p>
+                {{/if}}
+                <table class="table" id="gymMember">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Memeber Name</th>
+                            <th scope="col">Weight</th>
+                            <th scope="col">Height</th>
+                            <th scope="col">BMI</th>
+                            <th scope="col">Edit</th>
+                            <th scope="col">Delete</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#if gymMember}}
+                        {{#each gymMember}}
+
+                        <th scope="row">{{@index}}</th>
+                        <td>{{this.membername}} </td>
+                        <th scope="col">{{this.memberweight}}</th>
+                        <th scope="col">{{this.memberheight}}</th>
+                        <th scope="col">{{this.bmi}}</th>
+                        <th scope="col"><a href="/gymMember/update/{{this._id}}"><img alt="Edit gym Member" src="../public/images/Editing-edit-icon.png"></a></th>
+                        <th scope="col"><a href="/gymMember/delete/{{this._id}}"><img alt="Delte Gym Member" src="../public/images/delete.png"></a></th>
+
+                        </tr>
+                        {{/each}}
+                        {{/if }}
+                    </tbody>
+                </table>
+            </main>
+        </div>
+    </div>
+</div>
